@@ -15,6 +15,7 @@ class Form(ModelForm):
 			'password': TextInput(attrs={
 					'class': 'form-control',
 					'placeholder': 'Пороль',
+					'type': 'password',
 
 				}),
 			
