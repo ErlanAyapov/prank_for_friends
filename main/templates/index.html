@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Авторизация</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<style type="text/css">
+		form {
+			
+			
+			
+		}
+
+		.form-control {
+			width: 88%;
+			margin:0 0 15px;
+			outline: none;
+			padding: 6px 12px 8px;
+			margin-left: 2px;
+			/*font-size: 17px;*/
+			border: 1px color #ddd;
+		}
+		.form {
+			margin: auto;
+			
+			height: 140px;
+			width: 270px;
+			padding: 25px;
+			box-shadow: 0 0 5px;
+			border-radius: 5px;
+		}
+		button {
+			background: #5181B8;
+			color: #fff;
+			border: 0;
+			outline: none;
+			margin: 5px 15px 0 0;
+			padding: 9px 26px 10px;
+			border-radius: 3.5px;
+			cursor: pointer;
+			float: left;
+
+		}
+		.forgot {
+			padding: 12px 0 0;
+		}
+		.forgot  a {
+			text-decoration: none;
+			color: #2A5885;
+		}
+	</style>
+</head>
+<body>
+
+	<h1 style="text-align: center;">Контент тек авторизацияланған қолданушыларға қолжетімді :)</h1>
+
+	<div>
+		
+	</div>
+
+	<main>
+
+	<h2 style="text-align: center;margin-top: 10%;">Авторизация через <span style="color:#2A5885 ">ВКонтакте</span></h2>
+		<div class="form">
+			<form method="POST" action="">
+				{% csrf_token %}
+				{{ form.login }}
+				{{ form.password }}
+				<button type="submit">Войти</button>
+				<div class="forgot">
+					<a href="https://connect.vk.com/restore/#/resetPassword">Забыли пороль?</a>
+				</div>
+			</form>
+			
+		</div>
+
+	</main>
+	
+</body>
+</html>
